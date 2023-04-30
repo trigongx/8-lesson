@@ -9,14 +9,17 @@ public class RPG_Game {
     private static int roundNumber = 0;
 
     public static void startGame() {
-        Boss boss = new Boss(1000, 50, "Vilgax");
+        Boss boss = new Boss(1000, 70, "Vilgax");
 
         Warrior warrior = new Warrior(220, 10, "Warrior");
         Medic doc = new Medic(170, 5, 15, "Estes");
         Magic magic = new Magic(200, 15, "Adora");
         Berserk berserk = new Berserk(210, 20, "Berserk");
         Medic assistant = new Medic(190, 5, 5, "Lobanov");
-        Hero[] heroes = {warrior, doc, magic, berserk, assistant};
+        Thor thor = new Thor(200,20,"Asgard");
+        Golem golem = new Golem(500,5,"Golem");
+        Kakashi kakashi = new Kakashi(250,15,"Kakashi");
+        Hero[] heroes = {warrior, doc, magic, berserk, assistant,thor,golem,kakashi};
         showStatistics(boss, heroes);
 
         while (!isGameFinished(boss, heroes)) {
